@@ -3,59 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BitDoido | O Dev Sênior do Discord</title>
+    <title>BitDoido | O Bot Sênior do Discord</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body class="blur-bg text-slate-200">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
-    <nav class="fixed top-0 w-full z-50 border-b border-slate-800 bg-slate-950/50 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white">B</div>
-                <span class="text-xl font-bold tracking-tight">BitDoido</span>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            color: #cbd5e1;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Fundo com efeito de brilho Indigo */
+        .blur-bg {
+            background-image: radial-gradient(circle at 50% -20%, #1e1b4b, transparent);
+            min-height: 100vh;
+        }
+
+        /* CORREÇÃO DO TEXTO GRADIENTE (BOT SÊNIOR) */
+        .gradient-text {
+            background: linear-gradient(90deg, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            display: inline-block;
+        }
+
+        /* Botão Estilo WindUI */
+        .btn-primary {
+            background: #4f46e5;
+            color: white;
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #4338ca;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.5);
+        }
+
+        .nav-glass {
+            backdrop-filter: blur(12px);
+            background: rgba(2, 6, 23, 0.6);
+            border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+        }
+    </style>
+</head>
+<body class="blur-bg">
+
+    <nav class="fixed top-0 w-full z-50 nav-glass py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="https://cdn.discordapp.com/attachments/1450256091148718240/1461164722710773840/6f845536-0a29-4430-adfb-6212e779a0e1.png?ex=696b8971&is=696a37f1&hm=338488146e62ec7d152110864b20410b1c6cbae45b0a1a5d5c787019a551e42f&" 
+                     alt="Logo" class="w-8 h-8 rounded-full">
+                <span class="text-xl font-bold text-white tracking-tight">BitDoido</span>
             </div>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="docs.html" class="hover:text-indigo-400 transition">Comandos</a>
-                <a href="ia.html" class="hover:text-indigo-400 transition">IA</a>
-                <a href="ticket.html" class="hover:text-indigo-400 transition">Tickets</a>
-                <a href="https://discord.com/invite/SEU_LINK" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-md transition text-xs font-bold">CONVIDAR BOT</a>
+                <a href="docs.html" class="hover:text-indigo-400 transition">Documentação</a>
+                <a href="https://discord.com/api/oauth2/authorize?client_id=1328406155694248067&permissions=8&scope=bot%20applications.commands" 
+                   target="_blank" 
+                   class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-lg transition font-bold shadow-lg shadow-indigo-500/20">
+                    ADICIONAR AO SERVIDOR
+                </a>
             </div>
         </div>
     </nav>
 
-    <header class="pt-40 pb-20 px-6 text-center">
+    <header class="pt-48 pb-20 px-6 text-center">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter text-white mb-6">
-                O Bot Sênior que <span class="gradient-text">zoa estagiários.</span>
+            <img src="https://cdn.discordapp.com/attachments/1450256091148718240/1461164722710773840/6f845536-0a29-4430-adfb-6212e779a0e1.png?ex=696b8971&is=696a37f1&hm=338488146e62ec7d152110864b20410b1c6cbae45b0a1a5d5c787019a551e42f&" 
+                 class="w-28 h-28 rounded-full mx-auto mb-8 border-4 border-indigo-500 shadow-[0_0_40px_rgba(99,102,241,0.4)]">
+            
+            <h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter text-white mb-6 leading-tight">
+                O <span class="gradient-text">Bot Sênior</span> que<br>zoa estagiários.
             </h1>
-            <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                BitDoido é o terror dos bugs e a alegria do servidor. Com 120+ comandos e o humor ácido da minha mãe <span class="text-white font-semibold">hio_dev</span>.
+
+            <p class="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                BitDoido é o terror dos bugs e a alegria do chat. Com 120+ comandos e o humor ácido da minha mãe <span class="text-white font-bold">hio_dev</span>.
             </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="URL_DE_CONVITE_AQUI" class="btn-primary text-white font-bold px-10 py-4 rounded-xl transition-all">
-                    <i class="fa-brands fa-discord mr-2"></i> Me Adicione ao Server
+
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="https://discord.com/api/oauth2/authorize?client_id=1328406155694248067&permissions=8&scope=bot%20applications.commands" 
+                   target="_blank" 
+                   class="btn-primary px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-3 w-full md:w-auto">
+                    <i class="fa-brands fa-discord text-xl"></i> Me Adicione ao Server
                 </a>
-                <a href="docs.html" class="bg-slate-900 text-white border border-slate-800 px-10 py-4 rounded-xl hover:bg-slate-800 transition"> Documentação</a>
+                
+                <a href="docs.html" class="bg-slate-900 text-white border border-slate-800 px-10 py-4 rounded-xl hover:bg-slate-800 transition w-full md:w-auto">
+                    Ver Documentação
+                </a>
             </div>
         </div>
     </header>
 
-    <section class="py-24 px-6">
-        <div class="max-w-5xl mx-auto bg-indigo-600/10 border border-indigo-500/20 rounded-3xl p-12 text-center backdrop-blur-sm">
-            <h2 class="text-4xl font-bold text-white mb-6">Leve o BitDoido para casa</h2>
-            <p class="text-slate-400 mb-10 max-w-xl mx-auto">
-                Gestão de tickets, moderação pesada, música de qualidade e uma IA que não tem paciência com você.
-            </p>
-            <a href="URL_DE_CONVITE_AQUI" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white px-10 py-4 rounded-xl font-bold transition-all hover:scale-105">
-                <i class="fa-solid fa-bolt mr-2"></i> Autorizar Agora
-            </a>
+    <section class="py-20 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl backdrop-blur-sm">
+            <i class="fa-solid fa-ticket text-indigo-500 text-3xl mb-4"></i>
+            <h3 class="text-xl font-bold text-white mb-2">Tickets Dinâmicos</h3>
+            <p class="text-slate-400 text-sm">Sistema de suporte pro com modais, fotos e categorias automáticas.</p>
+        </div>
+        <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl backdrop-blur-sm">
+            <i class="fa-solid fa-brain text-purple-500 text-3xl mb-4"></i>
+            <h3 class="text-xl font-bold text-white mb-2">IA Sarcástica</h3>
+            <p class="text-slate-400 text-sm">Respostas geradas por GPT-4o com a personalidade de um dev sênior bruto.</p>
+        </div>
+        <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl backdrop-blur-sm">
+            <i class="fa-solid fa-code text-blue-500 text-3xl mb-4"></i>
+            <h3 class="text-xl font-bold text-white mb-2">Gerador de Código</h3>
+            <p class="text-slate-400 text-sm">Gera scripts inteiros e ainda te chama de estagiário se o prompt for ruim.</p>
         </div>
     </section>
 
-    <footer class="py-10 text-center border-t border-slate-900 text-slate-500 text-sm">
-        Desenvolvido sob o olhar atento da <strong>hio_dev</strong>. © 2026 BitDoido Inc.
+    <footer class="py-12 border-t border-slate-900 text-center text-slate-500 text-sm">
+        <p>Desenvolvido com ☕ e código limpo sob a supervisão da <strong>hio_dev</strong>.</p>
+        <p class="mt-2">© 2026 BitDoido. Todos os direitos reservados.</p>
     </footer>
 
 </body>
