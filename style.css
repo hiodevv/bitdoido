@@ -7,12 +7,37 @@ body { font-family: 'Inter', sans-serif; background: #020617; color: #cbd5e1; }
     min-height: 100vh;
 }
 
+/* Correção do Texto Gradiente */
 .gradient-text {
-    background: linear-gradient(90deg, #5865F2, #eb459e);
-    -webkit-background-clip: text; /* Para navegadores Chrome/Safari */
-    background-clip: text;         /* Propriedade padrão (Resolve o aviso da imagem) */
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    -webkit-background-clip: text; /* Crucial para o Chrome/Safari */
+    background-clip: text;         /* Padrão moderno */
     -webkit-text-fill-color: transparent;
+    color: transparent; 
+    display: inline-block;
 }
+
+/* Estilo do Botão de Convite */
+.btn-primary {
+    background: #4f46e5;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.5);
+}
+
+/* Fundo com desfoque */
+.blur-bg {
+    background-color: #020617;
+    background-image: radial-gradient(circle at 50% -20%, #1e1b4b, transparent);
+    min-height: 100vh;
+}
+
 
 .btn-primary {
     background: #6366f1;
@@ -81,4 +106,5 @@ code {
 
 .cmd-card:hover::after {
     opacity: 1;
+
 }
