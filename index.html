@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BitDoido | O Bot Sênior do Discord</title>
+    <title>BitDoido | O Bot Sênior</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -15,26 +15,23 @@
             background-color: #020617;
             color: #cbd5e1;
             margin: 0;
-            overflow-x: hidden;
         }
 
-        /* Fundo com efeito de brilho Indigo */
         .blur-bg {
             background-image: radial-gradient(circle at 50% -20%, #1e1b4b, transparent);
             min-height: 100vh;
         }
 
-        /* CORREÇÃO DO TEXTO GRADIENTE (BOT SÊNIOR) */
+        /* CORREÇÃO DO TEXTO INVISÍVEL */
         .gradient-text {
             background: linear-gradient(90deg, #6366f1, #a855f7);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            color: transparent;
+            color: #6366f1; /* Fallback caso o navegador não suporte clip */
             display: inline-block;
         }
 
-        /* Botão Estilo WindUI */
         .btn-primary {
             background: #4f46e5;
             color: white;
@@ -50,7 +47,7 @@
 
         .nav-glass {
             backdrop-filter: blur(12px);
-            background: rgba(2, 6, 23, 0.6);
+            background: rgba(2, 6, 23, 0.7);
             border-bottom: 1px solid rgba(30, 41, 59, 0.5);
         }
     </style>
@@ -64,12 +61,12 @@
                      alt="Logo" class="w-8 h-8 rounded-full">
                 <span class="text-xl font-bold text-white tracking-tight">BitDoido</span>
             </div>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="docs.html" class="hover:text-indigo-400 transition">Documentação</a>
+            <div class="flex items-center gap-6">
+                <a href="docs.html" class="hidden md:block hover:text-indigo-400 transition text-sm">Documentação</a>
                 <a href="https://discord.com/api/oauth2/authorize?client_id=1328406155694248067&permissions=8&scope=bot%20applications.commands" 
                    target="_blank" 
-                   class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-lg transition font-bold shadow-lg shadow-indigo-500/20">
-                    ADICIONAR AO SERVIDOR
+                   class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition">
+                    ADICIONAR BOT
                 </a>
             </div>
         </div>
@@ -80,12 +77,12 @@
             <img src="https://cdn.discordapp.com/attachments/1450256091148718240/1461164722710773840/6f845536-0a29-4430-adfb-6212e779a0e1.png?ex=696b8971&is=696a37f1&hm=338488146e62ec7d152110864b20410b1c6cbae45b0a1a5d5c787019a551e42f&" 
                  class="w-28 h-28 rounded-full mx-auto mb-8 border-4 border-indigo-500 shadow-[0_0_40px_rgba(99,102,241,0.4)]">
             
-            <h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter text-white mb-6 leading-tight">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-white mb-6">
                 O <span class="gradient-text">Bot Sênior</span> que<br>zoa estagiários.
             </h1>
 
-            <p class="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-                BitDoido é o terror dos bugs e a alegria do chat. Com 120+ comandos e o humor ácido da minha mãe <span class="text-white font-bold">hio_dev</span>.
+            <p class="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                BitDoido é o terror dos bugs. Com 120+ comandos e o humor ácido da minha mãe <span class="text-white font-bold">hio_dev</span>.
             </p>
 
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
@@ -96,33 +93,14 @@
                 </a>
                 
                 <a href="docs.html" class="bg-slate-900 text-white border border-slate-800 px-10 py-4 rounded-xl hover:bg-slate-800 transition w-full md:w-auto">
-                    Ver Documentação
+                    Ver Comandos
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="py-20 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl backdrop-blur-sm">
-            <i class="fa-solid fa-ticket text-indigo-500 text-3xl mb-4"></i>
-            <h3 class="text-xl font-bold text-white mb-2">Tickets Dinâmicos</h3>
-            <p class="text-slate-400 text-sm">Sistema de suporte pro com modais, fotos e categorias automáticas.</p>
-        </div>
-        <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl backdrop-blur-sm">
-            <i class="fa-solid fa-brain text-purple-500 text-3xl mb-4"></i>
-            <h3 class="text-xl font-bold text-white mb-2">IA Sarcástica</h3>
-            <p class="text-slate-400 text-sm">Respostas geradas por GPT-4o com a personalidade de um dev sênior bruto.</p>
-        </div>
-        <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl backdrop-blur-sm">
-            <i class="fa-solid fa-code text-blue-500 text-3xl mb-4"></i>
-            <h3 class="text-xl font-bold text-white mb-2">Gerador de Código</h3>
-            <p class="text-slate-400 text-sm">Gera scripts inteiros e ainda te chama de estagiário se o prompt for ruim.</p>
-        </div>
-    </section>
-
-    <footer class="py-12 border-t border-slate-900 text-center text-slate-500 text-sm">
-        <p>Desenvolvido com ☕ e código limpo sob a supervisão da <strong>hio_dev</strong>.</p>
-        <p class="mt-2">© 2026 BitDoido. Todos os direitos reservados.</p>
+    <footer class="py-12 border-t border-slate-900 text-center text-slate-500 text-xs">
+        Desenvolvido sob a supervisão da <strong>hio_dev</strong>. © 2026 BitDoido.
     </footer>
 
 </body>
