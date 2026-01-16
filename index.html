@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
         body {
             font-family: 'Inter', sans-serif;
@@ -17,90 +17,71 @@
             margin: 0;
         }
 
-        .blur-bg {
-            background-image: radial-gradient(circle at 50% -20%, #1e1b4b, transparent);
-            min-height: 100vh;
-        }
-
-        /* CORREÇÃO DO TEXTO INVISÍVEL */
+        /* CORREÇÃO DO TEXTO INVISÍVEL E DO AVISO DE COMPATIBILIDADE */
         .gradient-text {
             background: linear-gradient(90deg, #6366f1, #a855f7);
-            -webkit-background-clip: text;
-            background-clip: text;
+            -webkit-background-clip: text; /* Para Chrome/Safari */
+            background-clip: text;         /* Propriedade padrão solicitada */
             -webkit-text-fill-color: transparent;
-            color: #6366f1; /* Fallback caso o navegador não suporte clip */
+            color: transparent;
             display: inline-block;
         }
 
         .btn-primary {
             background: #4f46e5;
             color: white;
-            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4);
+            padding: 1rem 2.5rem;
+            border-radius: 0.75rem;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             transition: all 0.3s ease;
         }
 
         .btn-primary:hover {
             background: #4338ca;
             transform: translateY(-2px);
-            box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.5);
-        }
-
-        .nav-glass {
-            backdrop-filter: blur(12px);
-            background: rgba(2, 6, 23, 0.7);
-            border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.4);
         }
     </style>
 </head>
-<body class="blur-bg">
+<body class="bg-[#020617]">
 
-    <nav class="fixed top-0 w-full z-50 nav-glass py-4">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="https://cdn.discordapp.com/attachments/1450256091148718240/1461164722710773840/6f845536-0a29-4430-adfb-6212e779a0e1.png?ex=696b8971&is=696a37f1&hm=338488146e62ec7d152110864b20410b1c6cbae45b0a1a5d5c787019a551e42f&" 
-                     alt="Logo" class="w-8 h-8 rounded-full">
-                <span class="text-xl font-bold text-white tracking-tight">BitDoido</span>
-            </div>
-            <div class="flex items-center gap-6">
-                <a href="docs.html" class="hidden md:block hover:text-indigo-400 transition text-sm">Documentação</a>
-                <a href="https://discord.com/api/oauth2/authorize?client_id=1328406155694248067&permissions=8&scope=bot%20applications.commands" 
-                   target="_blank" 
-                   class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition">
-                    ADICIONAR BOT
-                </a>
-            </div>
+    <nav class="p-6 flex justify-between items-center border-b border-slate-800 bg-slate-950/50 backdrop-blur-md fixed top-0 w-full z-50">
+        <div class="flex items-center gap-2">
+            <img src="https://cdn.discordapp.com/attachments/1450256091148718240/1461164722710773840/6f845536-0a29-4430-adfb-6212e779a0e1.png?ex=696b8971&is=696a37f1&hm=338488146e62ec7d152110864b20410b1c6cbae45b0a1a5d5c787019a551e42f&" class="w-8 h-8 rounded-full">
+            <span class="text-white font-bold">BitDoido</span>
         </div>
+        <a href="https://discord.com/api/oauth2/authorize?client_id=1328406155694248067&permissions=8&scope=bot%20applications.commands" target="_blank" class="text-xs bg-indigo-600 px-4 py-2 rounded-lg font-bold text-white">ADD BOT</a>
     </nav>
 
-    <header class="pt-48 pb-20 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <img src="https://cdn.discordapp.com/attachments/1450256091148718240/1461164722710773840/6f845536-0a29-4430-adfb-6212e779a0e1.png?ex=696b8971&is=696a37f1&hm=338488146e62ec7d152110864b20410b1c6cbae45b0a1a5d5c787019a551e42f&" 
-                 class="w-28 h-28 rounded-full mx-auto mb-8 border-4 border-indigo-500 shadow-[0_0_40px_rgba(99,102,241,0.4)]">
+    <header class="pt-48 pb-20 text-center px-6">
+        <img src="https://cdn.discordapp.com/attachments/1450256091148718240/1461164722710773840/6f845536-0a29-4430-adfb-6212e779a0e1.png?ex=696b8971&is=696a37f1&hm=338488146e62ec7d152110864b20410b1c6cbae45b0a1a5d5c787019a551e42f&" class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-indigo-500 shadow-xl">
+        
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6">
+            O <span class="gradient-text">Bot Sênior</span> que<br>zoa estagiários.
+        </h1>
+        
+        <p class="text-slate-400 mb-10 max-w-xl mx-auto">
+            Com 120+ comandos e o humor ácido da minha mãe <strong>hio_dev</strong>.
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <a href="https://cdn.discordapp.com/attachments/1450256091148718240/1461164722710773840/6f845536-0a29-4430-adfb-6212e779a0e1.png?ex=696b8971&is=696a37f1&hm=338488146e62ec7d152110864b20410b1c6cbae45b0a1a5d5c787019a551e42f&" 
+               target="_blank" 
+               class="btn-primary">
+                <i class="fa-brands fa-discord"></i> Me Adicione ao Server
+            </a>
             
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-white mb-6">
-                O <span class="gradient-text">Bot Sênior</span> que<br>zoa estagiários.
-            </h1>
-
-            <p class="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-                BitDoido é o terror dos bugs. Com 120+ comandos e o humor ácido da minha mãe <span class="text-white font-bold">hio_dev</span>.
-            </p>
-
-            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <a href="https://discord.com/api/oauth2/authorize?client_id=1328406155694248067&permissions=8&scope=bot%20applications.commands" 
-                   target="_blank" 
-                   class="btn-primary px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-3 w-full md:w-auto">
-                    <i class="fa-brands fa-discord text-xl"></i> Me Adicione ao Server
-                </a>
-                
-                <a href="docs.html" class="bg-slate-900 text-white border border-slate-800 px-10 py-4 rounded-xl hover:bg-slate-800 transition w-full md:w-auto">
-                    Ver Comandos
-                </a>
-            </div>
+            <a href="docs.html" class="bg-slate-900 border border-slate-800 px-10 py-4 rounded-xl text-white hover:bg-slate-800 transition">
+                Documentação
+            </a>
         </div>
     </header>
 
-    <footer class="py-12 border-t border-slate-900 text-center text-slate-500 text-xs">
-        Desenvolvido sob a supervisão da <strong>hio_dev</strong>. © 2026 BitDoido.
+    <footer class="py-10 text-center text-slate-500 text-sm">
+        Supervisão: <strong>hio_dev</strong> © 2026
     </footer>
 
 </body>
