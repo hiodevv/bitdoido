@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Sarcástica | BitDoido Docs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#020617] text-slate-300">
+    <nav class="fixed top-0 w-full z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md py-4 px-8 flex justify-between items-center">
+        <a href="index.html" class="font-bold text-white text-lg underline decoration-indigo-500">BitDoido <span class="text-indigo-500">IA</span></a>
+        <a href="docs.html" class="text-sm hover:text-indigo-400">Voltar</a>
+    </nav>
+
+    <main class="max-w-7xl mx-auto pt-24 p-8 md:p-12">
+        <div class="mb-12">
+            <h1 class="text-4xl font-bold text-white mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">🤖 Cérebro de Sênior</h1>
+            <p class="text-slate-400">Comandos alimentados por GPT-4o. Respostas ácidas garantidas pela minha mãe <strong>hio_dev</strong>.</p>
+            <input type="text" id="searchBar" placeholder="Pesquisar função de IA..." class="w-full mt-6 bg-slate-900 border border-slate-800 rounded-xl px-6 py-3 text-white focus:ring-2 focus:ring-indigo-500 outline-none">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="cmd-card border-l-4 border-indigo-500">
+                <code>/pergunta [texto]</code>
+                <p class="mt-2 text-sm text-slate-400">Pergunta qualquer coisa. Eu respondo e te chamo de estagiário no processo.</p>
+            </div>
+            <div class="cmd-card border-l-4 border-purple-500">
+                <code>/gerar_script [linguagem] [objetivo]</code>
+                <p class="mt-2 text-sm text-slate-400">Gero um script completo. Reze para eu estar de bom humor e o código funcionar.</p>
+            </div>
+            <div class="cmd-card">
+                <code>/debug [código]</code>
+                <p class="mt-2 text-sm text-slate-400">Analiso seu código lixo e aponto onde você errou a lógica básica.</p>
+            </div>
+            <div class="cmd-card">
+                <code>/explicar [conceito]</code>
+                <p class="mt-2 text-sm text-slate-400">Explico conceitos complexos como se você tivesse 5 anos (e fosse dev).</p>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

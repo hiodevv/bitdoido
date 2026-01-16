@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body { font-family: 'Inter', sans-serif; background: #020617; color: #cbd5e1; }
+
+.blur-bg {
+    background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+    min-height: 100vh;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #5865F2, #eb459e);
+    -webkit-background-clip: text; /* Para navegadores Chrome/Safari */
+    background-clip: text;         /* Propriedade padrão (Resolve o aviso da imagem) */
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+    background: #6366f1;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+}
+
+.btn-primary:hover { transform: translateY(-2px); filter: brightness(1.2); }
+
+code {
+    background: #1e293b;
+    color: #818cf8;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+
+/* Cards de Comando Estilo WindUI Docs */
+.cmd-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(30, 41, 59, 1);
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.cmd-card:hover {
+    border-color: #6366f1;
+    background: rgba(15, 23, 42, 0.8);
+    transform: translateX(4px);
+}
+
+.cmd-card code {
+    font-size: 0.85rem;
+    color: #818cf8;
+    background: #1e293b;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-family: 'Fira Code', monospace}
+
+
+
+    .cmd-card {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+/* Efeito de brilho ao clicar */
+.cmd-card:active {
+    transform: scale(0.98);
+}
+
+/* Indicador visual de "Copy" no hover */
+.cmd-card::after {
+    content: 'Click to copy';
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #475569;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.cmd-card:hover::after {
+    opacity: 1;
+}

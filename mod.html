@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderação | BitDoido Docs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#020617] text-slate-300">
+    <nav class="fixed top-0 w-full z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md py-4 px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="font-bold text-white text-lg underline decoration-indigo-500">BitDoido <span class="text-indigo-500">Mod</span></a>
+            <a href="docs.html" class="text-sm hover:text-indigo-400 transition">Voltar para Docs</a>
+        </div>
+    </nav>
+
+    <div class="flex max-w-7xl mx-auto pt-24">
+        <main class="flex-1 p-8 md:p-12">
+            <div class="mb-12">
+                <h1 class="text-4xl font-bold text-white mb-4">🔨 Martelo da Moderação</h1>
+                <p class="text-slate-400">Comandos para manter os estagiários na linha. Use com sabedoria (ou não).</p>
+                <input type="text" id="searchBar" placeholder="Procurar punição..." class="w-full mt-6 bg-slate-900 border border-slate-800 rounded-xl px-6 py-3 text-white focus:ring-2 focus:ring-red-500 outline-none transition">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="cmd-card border-l-4 border-red-500">
+                    <code>/ban [membro] [motivo]</code>
+                    <p class="mt-2 text-sm text-slate-400">Bane o usuário permanentemente. O famoso "foi de base".</p>
+                </div>
+                <div class="cmd-card border-l-4 border-orange-500">
+                    <code>/kick [membro]</code>
+                    <p class="mt-2 text-sm text-slate-400">Expulsa o usuário. Ele pode voltar, se você deixar.</p>
+                </div>
+                <div class="cmd-card border-l-4 border-yellow-500">
+                    <code>/mute [membro] [tempo]</code>
+                    <p class="mt-2 text-sm text-slate-400">Cala o usuário por um tempo. Silêncio é ouro.</p>
+                </div>
+                <div class="cmd-card border-l-4 border-blue-500">
+                    <code>/limpar [quantidade]</code>
+                    <p class="mt-2 text-sm text-slate-400">Deleta mensagens em massa. Apague os rastros.</p>
+                </div>
+                <div class="cmd-card">
+                    <code>/lockdown</code>
+                    <p class="mt-2 text-sm text-slate-400">Tranca o canal atual. Ninguém entra, ninguém sai.</p>
+                </div>
+                <div class="cmd-card">
+                    <code>/warn [membro] [motivo]</code>
+                    <p class="mt-2 text-sm text-slate-400">Dá um aviso formal. Na próxima é vala.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

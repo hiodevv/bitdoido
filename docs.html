@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docs | BitDoido</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#020617] text-slate-300">
+
+    <nav class="fixed top-0 w-full z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md py-4 px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="font-bold text-white text-lg">BitDoido <span class="text-indigo-500">Docs</span></a>
+            <div class="flex gap-4">
+                <a href="index.html" class="text-sm hover:text-white transition">Início</a>
+                <a href="URL_DE_CONVITE_AQUI" class="text-sm text-indigo-400 font-bold hover:text-indigo-300">Add Bot</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex max-w-7xl mx-auto pt-24">
+        <aside class="w-64 fixed h-full border-r border-slate-900 p-8 hidden md:block">
+            <h4 class="text-white font-semibold mb-6">Navegação</h4>
+            <ul class="space-y-2 text-sm">
+                <li><a href="ia.html" class="sidebar-link">🤖 IA Sarcástica</a></li>
+                <li><a href="ticket.html" class="sidebar-link">🎫 Tickets Pro</a></li>
+                <li><a href="mod.html" class="sidebar-link">🔨 Moderação</a></li>
+                <li><a href="musica.html" class="sidebar-link">🎶 Música</a></li>
+                <li><a href="fun.html" class="sidebar-link">☕ Diversão</a></li>
+            </ul>
+        </aside>
+
+        <main class="flex-1 md:ml-64 p-8 md:p-12">
+            <div class="mb-12 sticky top-20 z-40">
+                <input type="text" id="searchBar" placeholder="Pesquisar entre os 120 comandos..." 
+                class="w-full bg-slate-900 border border-slate-800 rounded-xl px-6 py-4 text-white focus:ring-2 focus:ring-indigo-500 outline-none shadow-2xl">
+            </div>
+
+            <section id="geral">
+                <h2 class="text-3xl font-bold text-white mb-6">🚀 Começando</h2>
+                <p class="text-slate-400 mb-8 leading-relaxed">
+                    Para usar meus comandos, digite <code>/</code> no seu chat. Se eu não responder, ou você é estagiário ou minha mãe <strong>hio_dev</strong> me desligou para manutenção. Clique nos comandos abaixo para copiar!
+                </p>
+
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="cmd-card">
+                        <code>/ajuda</code>
+                        <p class="mt-2 text-sm text-slate-400">Mostra a lista de comandos no Discord (mas o site é mais bonito).</p>
+                    </div>
+                    <div class="cmd-card">
+                        <code>/convite</code>
+                        <p class="mt-2 text-sm text-slate-400">Gera o link para me convidar (faça isso agora!).</p>
+                    </div>
+                    <div class="cmd-card">
+                        <code>/mae</code>
+                        <p class="mt-2 text-sm text-slate-400">Revela quem é a gênia por trás desse código (hio_dev).</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
